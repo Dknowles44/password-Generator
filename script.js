@@ -18,14 +18,14 @@ function getRandomLower() {
 function getRandomNumber() {
   return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 }
-
+// picks random property from object funcpool
 var randomProperty = function (obj) {
   var keys = Object.keys(obj);
   return obj[keys[keys.length * Math.random() << 0]];
 };
 
 function writePass() {
-  //
+  // Questions for user input
   var length = window.prompt('How long do you want your password between 8 and 128', '12');
   var upper = window.confirm('Would you like uppercase letters ?');
   var lower = window.confirm('Would you like lowercase letters ?');
@@ -48,7 +48,7 @@ function writePass() {
   }
 
   console.log(funcpool);
-
+// Runs funcpool through the for loop
   for (var i = 0; i < length; i++) {
     console.log(randomProperty(funcpool))
 
